@@ -1,0 +1,24 @@
+THEME 1 : INFORMATION SÛRE ET ACCESSIBLE 
+
+React 17.0.2
+Ionic (Na react native)
+Spring boot
+Postgresql
+MongoDB
+Firebase
+AdobeXD
+
+Statistique mettant en valeur l'efficacité des vaccins + details par vaccin
+Page contenant des vidéos explicatives des vaccins avec des sous-titres en plusieurs langues
+Chat bot pour les utilisateurs inscrits
+Messagerie avec les responsables (Du genre modérateurs) (https://www.youtube.com/watch?v=o_IjEDAuo8Y)
+Système de rendez-vous en ligne
+Forum utilisateurs
+BlockChain + smart contracts (Informations à propos des vaccins)
+Validation d'un contenu
+Page avec liste avec details du personnel responsable dans le secteur de la gestion des vaccins	
+Notification (Nouveauté , messagerie , Forum)
+Ussd bot Africa's talking (PHP)
+Sms(bot)
+Génération pdf à imprimer pour la zone rurale
+Token JWT + OAuth ()

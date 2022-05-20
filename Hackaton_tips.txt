@@ -1,0 +1,21 @@
+Hackatons tips :
+	- Don't be afraid
+	- Talk to sponsors :
+		. What kind of apps are they are/are not looking for
+	- Go with a team :
+		. Distribution of the team :
+			o Product and design - Front end - Back end
+		. Know your team :
+			o Know everyone's specialities
+		. Make sure you worked with them before
+	- Work from your presentation first then build the app based on that :
+		. Sketch up the views to present
+		. Rough outline of your presentation
+		. Don't build a login page
+		. Get features to cut out to fit the time given
+	- Knowing how to crunch
+	- Presentation :
+		. Present the current situation
+		. Present the problem
+		. Give the solution
+		. Explain the solution

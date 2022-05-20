@@ -1,0 +1,14 @@
+Formulaires: Input, select, checkbox, DateTime picker
+Structuration des pages
+Authentification jwt
+Protection des pages
+Compression gzip
+
+//-----------------------------------------------
+
+Use the dotenv module: require('dotenv').config()
+Connect mongodb with nodejs
+	Variables in dotenv: Database url
+Create schema with mongoose
+Create a model based with the schema
+Do queries with mongodb

@@ -1,0 +1,12 @@
+box-sizing:border-box
+gap = ohatrany margin
+
+.even-colums { display:flex; gap: 1em }
+.even-colums > * { flex-basis:100% }
+
+.grid-ish { display:flex; flex-wrap:wrap }
+.grid-ish > * { flex: 1 1 10em }
+
+.content-sidebar{ display:flex; flex-wrap:wrap }
+.content-sidebar > * :nth-child(1){ flex:1 1 70%; min-width:30ch }
+.content-sidebar > * :nth-child(2){ flex:1 1 30% }

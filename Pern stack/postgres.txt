@@ -1,0 +1,8 @@
+- psql -U postgres
+- commands :
+	\l == list the databases
+	\c databaseName == connect to a database
+	\dt == list all the tables inside the database
+
+-psql --host = the_host_url --port = 5432 --username=username_here --password --dbname = dbname_here
+exemple :  psql --host=ec2-63-32-248-14.eu-west-1.compute.amazonaws.com --port=5432 --username=mgrpewuvokkczq --password --dbname=d57qidrm564qei

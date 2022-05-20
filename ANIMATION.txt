@@ -1,0 +1,12 @@
+Best NPM Packages to build Animations using ReactJS :
+. React-Vis
+. Styled-Components
+. React-Anime
+. React Reveal
+. React Spring
+
+
+3D WEBSITE :
+. Three.js
+. React three fiber
+. ScrollMagic

@@ -1,0 +1,15 @@
+- heroku login
+- heroku git:clone -a appName
+- npm add serve
+- package.json :
+  "scripts": {
+  	"dev": "react-scripts start",
+  	"start": "serve -s build",
+  	"build": "react-scripts build",
+  	"heroku-postbuild": "npm run build"
+  }
+
+- To commit:
+ . git add .
+ . git commit -am "commit"
+ . git push heroku main

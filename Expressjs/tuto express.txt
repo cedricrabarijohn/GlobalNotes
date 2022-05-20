@@ -1,0 +1,58 @@
+-documentation : https://www.expressjs.com
+-npm init -y
+-installation : npm i express
+-Creating the app :
+    const express = require('express')
+    const app = express()
+    const cors = require('cors')
+    app.use(cors())
+    app.use(express.json())
+
+-get api :
+    app.get('/',(req, res) => {
+        res.send('Hello world')
+    });
+
+    app.listen(3001, () => {console.log('listening on port 3001')})
+-Launch the server : 
+    node index.js
+- Live change to the server :   
+    . npm install -g nodemon
+- Launch the server via :
+    . nodemon index.js
+- Environment variable PORT
+    const port = process.env.PORT || 3000
+    app.listen(port, ()=>{console.log(`listening on port ${port}...`)})
+    - PORT=5000 nodemon index.js
+- route :
+    .params :
+        app.get('/api/courses/:id', (req,res) => {
+            res.send(req.params.id)
+        })
+    .query:
+        - Add something after "?" in the url , like "/link/blabla?query=yes"
+        app.get('/api/courses/:year/:month', (req,res)=>{
+            res.send(req.query)
+            // will output query=yes
+        })
+- Itterate throught array js :
+    const courses = [blabla...]
+    const course = courses.find(c => c.id === something )
+- Status
+    res.status(404).send('Something')
+- POST request :
+    . Add in top of the index js file :
+        app.use(express.json())
+    .to get the body :
+        req.body.something
+    app.post('/api/courses',(req,res) => {
+        const course = {
+            id:courses.length + 1,
+            name:req.body.name
+        }
+        courses.push(course)
+        res.send(course)
+
+    })
+
+- Connect to database/Postgresql : https://www.youtube.com/watch?v=_n-Ai30C1qs

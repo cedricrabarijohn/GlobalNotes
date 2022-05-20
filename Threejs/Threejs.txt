@@ -1,0 +1,4 @@
+. To install :
+	threejs
+	react-three-fiber
+	react-three/drei

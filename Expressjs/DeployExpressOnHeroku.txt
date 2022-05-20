@@ -1,0 +1,9 @@
+-inside package.json scripts
+    "start":"node index.js"
+- Login to heroku
+- git init
+- git add .
+- git commit -m "initial"
+- heroku login
+- heroku create
+- git push heroku master

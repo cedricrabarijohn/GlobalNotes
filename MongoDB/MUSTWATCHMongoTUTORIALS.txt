@@ -1,0 +1,3 @@
+MONGODB DEPLOY : https://www.youtube.com/watch?v=Qn0SOL8vK8w
+CRUD : https://www.youtube.com/watch?v=eYVGoXPq2RA
+API WITH JWT : https://www.youtube.com/watch?v=2jqok-WgelI

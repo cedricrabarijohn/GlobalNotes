@@ -1,0 +1,10 @@
+Local files to repo 
+https://docs.github.com/en/get-started/importing-your-projects-to-github/importing-source-code-to-github/adding-locally-hosted-code-to-github
+
+git init -b main
+git add .
+git commit -m "First commit"
+git remote add origin url
+git push origin main
+
+

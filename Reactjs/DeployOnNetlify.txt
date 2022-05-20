@@ -1,0 +1,4 @@
+go to netlify
+do the simple deployement thing with github
+go to settings
+add Environment variables : CI false

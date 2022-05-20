@@ -1,0 +1,21 @@
+Prerequisites:
+    Nodejs
+    ExpressJs
+    Mongodb
+    Async javascript
+
+User Authentification Choices: (By complexity)
+    Session
+    Json Web Tokens
+    OAuth : {
+        In-House
+        SaaS
+    }
+    Other/Ad-Hoc
+
+Passport js:
+    Nodejs Framework Middleware
+
+Express session:
+    npm install express-session
+

@@ -1,0 +1,42 @@
+Deploy express js on netlify
+
+https://www.youtube.com/watch?v=hQAu0YEIF0g
+- npm init -y
+- npm install express netlify-lambda serverless-http
+- Create a .gitignore
+- add node_modules to gitignore
+- Create netlify.toml:
+    [build]
+        functions = "functions"
+- Create a folder dist and add index.html inside the folder
+- Create a folder named "src" in the same level as the node_modules
+- Inside the folder "src", create the js file where to write the api:
+    ex : api.js
+        const express = require('express')
+        const serverless = require('serverless-http)
+        const app = express()
+
+        const router = express.Router()
+
+        router.get('/',(res,req)=>{
+            res.json({
+                'hello':'hi'
+            })
+        })
+        
+        app.use('/.netlify/functions/api',router)
+
+        module.exports.handler = serverless(app)
+
+- In package.json :
+    "scripts":{
+        "start":"netlify-lambda serve src",
+        "build":"netlify-lambda build src"
+    }
+
+-npm start (To start it locally)
+
+-To deploy it on netlify:
+    -Commit the project inside a git repository
+    -Build command : npm run build
+    -Publish directory : dist

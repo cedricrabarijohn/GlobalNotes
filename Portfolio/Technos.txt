@@ -1,0 +1,5 @@
+React
+Nextjs
+Chakra UI 
+Framer Motion
+Three js

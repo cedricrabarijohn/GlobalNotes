@@ -1,0 +1,13 @@
+-Compter l'energie
+-3 cartes par tour
+-3 energies au début
+-2 énergies par tour
+-Attaque priorisé pour la meme ligne
+-24 cartes dans le deck , 2 examplaires chacun
+-Vitesse - vie - skill - morale - id
+-morale = +de coup critique : double des dégats
+-LAST STAND vie restante + morale / 100 > Attaque + vie
+- bonus skill : Attaque * skill / 500
+- chaine : defense * skill /50
+-En general , les morales + , attaque + , speed + etc , 20%
+-

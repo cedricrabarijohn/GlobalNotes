@@ -1,0 +1,55 @@
+https://www.youtube.com/watch?v=YPsftzOURLw
+
+-Create a firebase application
+-Copy the firebase sdk after saving the application
+-Create a cloud firestore database - Choose start in test mode
+-npm i nodemon cors express firebase
+-create config.js:
+	// Firebase 8.10.0
+    	const firebase = require('firebase')
+	const firestore = require ('firebase/firestore')
+	const firebaseConfig = {
+	}
+	const app = firebase.initializeApp(firebaseConfig)
+	const db = firebase.firestore()
+	const User = db.collection("Users")
+	const Test = db.collection("Test")
+
+	module.exports = User
+
+-inside index.js:
+    const express = require('express')
+    const cors = require('cors')
+    const User = require('./config')
+    const app = express()
+
+    app.use(express.json())
+    app.use(cors())
+
+    app.get("/",(req,res)=>{
+        const snapshot = await User.get()
+        const list = snapshot.docs.map((doc)=>({id:doc.id, ...doc.data()}))
+        res.send(list)
+    })
+
+    app.post("/create", async(req,res)=>{
+        const data = req.body
+        await User.add(data)
+        res.send({msg:"User added"})
+    })
+
+    app.post("update", async(req,res)=>{
+        const id = req.body.id
+        delete req.body.id
+        const data = req.body
+        await User.doc(id).update(data)
+    })
+
+    app.post("delete", async(req,res)=>{
+        const id = req.body.id
+        await User.doc(id).delete()
+        res.send({msg: "Deleted"})
+    })
+    
+    const PORT = process.env.PORT || 4000
+    app.listen(PORT, ()=>{console.log("Server running in port "+PORT)})

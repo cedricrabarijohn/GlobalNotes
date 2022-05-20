@@ -1,0 +1,12 @@
+npm install --save react-animated-number
+import AnimatedNumber from 'react-animated-number'
+
+<AnimatedNumber
+value={50}
+style={{
+    fontSize:200
+}}
+formatValue={n=>n.toFixed(0)}
+frameStyle={percentage=>percentage>20 && percentage<80 ? { opacity:0.5 }: { opacity:1 }}
+>
+</AnimatedNumber>
