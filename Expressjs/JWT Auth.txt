@@ -1,0 +1,73 @@
+npm install bcrypt
+
+const bcrypt = require('bcrypt')
+const salt = await bcrypt.genSalt()
+const password = await bcrypt.hash(thePassword, salt)
+
+//Cookie
+res.setHeader('Set-cookies', 'newUser=true')
+
+//Cookie parser
+npm install cookie-parser
+
+const cookieParser = require('cookie-parser')
+
+app.use(cookieParser())
+
+res.cookie('newUser', true, {
+	maxAge: 1000*60*60*24,
+	httpOnly:true
+})
+//To get the cookies
+const cookies = req.cookies
+
+//JWT Signing
+Headers - Payload - Signature
+
+//JWT implementation
+npm install jsonwebtoken
+const maxAge = 3*24*60*60 //in secondes
+const jwt = require('jsonwebtoken')
+
+const createToken = (id) => {
+ const jwt.sign({id}, 'secret',{
+  expiresIn: maxAge
+ })
+}
+
+//inside the login function
+const token = createToken(user._id)
+res.cookie('jwt', token, { httpOnly: true, maxAge: maxAge * 1000 })
+
+//Login
+- Inside the model :
+userSchema.statics.login = async(email, password){
+ const user = await this.findOne({email})
+ if(user){
+  const auth = await bcrypt.compare(password, user.password)
+  if(auth){
+   return user
+  }
+  throw Error('incorrect password')
+ }
+ throw Error('incorrect email')
+}
+
+- Inside controller :
+const login = async(req,res) => {
+	const { email , password } = req.body
+	try{
+		const user = await User.login(email, password)
+		res.status(200).json({user: user._id})
+	}catch(err){
+		res.status(400).json({})
+	} 
+}
+
+
+
+
+
+
+
+

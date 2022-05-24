@@ -1,0 +1,8 @@
+Bug tracker
+
+1. Design Pattern
+2. Clean UI
+3. CRUD Functionality
+4. Authentication and Authorization
+5. Database
+6. Solve a Business Problem

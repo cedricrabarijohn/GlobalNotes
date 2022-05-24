@@ -12,3 +12,6 @@ Connect mongodb with nodejs
 Create schema with mongoose
 Create a model based with the schema
 Do queries with mongodb
+
+VITA
+//-----------------------------------------------

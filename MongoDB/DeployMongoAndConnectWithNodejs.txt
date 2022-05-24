@@ -3,6 +3,7 @@
 - inside db/connections.js:
 	const mongoose = require('mongoose')
 	const URI = " THE URL PROVIDED BY THE WEBSITE "
+	//if localhost : const URI = 'mongodb://user:pass@hostname:27017/'
 	const connectDB = async() =>{
 		await mongoose.connect(URI, {
 			useUnifiedTopology: true,
@@ -18,7 +19,7 @@
 	app.use(express.json({extended:false}))
 
 - create db/User.js:
-	const mongoose = requirea('mongoose')
+	const mongoose = require('mongoose')
 	const user = new mongoose.Schema({
 		firstName:{
 			type:String
@@ -31,7 +32,7 @@
 
 - Create api/User.js
 	const express = require('express')
-	const mongoose = require(''mongoose)
+	const mongoose = require('mongoose')
 	const User = require('../db/User')
 	const route = express.Router()
 
