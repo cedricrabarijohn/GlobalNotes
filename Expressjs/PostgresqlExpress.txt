@@ -1,1 +1,13 @@
-https://www.youtube.com/watch?v=_Mun4eOOf2Q
+const { Pool } = require('pg')
+
+const pool = new Pool({
+    host: 'localhost',
+    user: 'postgres',
+    password: '1234',
+    database: 'testevaluation',
+    max: 20,
+    idleTimeoutMillis: 30000,
+    connectionTimeoutMillis: 3000,
+});
+
+module.exports = pool

@@ -1,0 +1,44 @@
+-1^0 = 1
+0.9 * 0.9 = 0.81
+
+Simplifier une racine carree :
+	5 x racine(117)
+	5* racine(3*3*13)
+	5 * 3 * racine(13)
+	15 racine(13)
+
+Simplifier la racine carree d'une fraction
+	racine(1/200)
+	racine(1) / racine(200)
+	1/racine(200)
+	1/racine(2*100)
+	1/racine(2*10*10)
+	1/10 racine(2)
+	[1/10 racine(2)] * [racine(2)/racine(2)]
+	racine(2) / [10 racine(2)*racine(2)]
+	racine(2) / 10 * 2 = racine(2)/20
+Simplifier les racines carrees dans une expression numerique
+	racine(1/44)
+	racine(1) / racine(44)
+	1/racine(44)
+	1 / racine(2 * 2 * 11)
+	1 / 2 racine(11)
+	racine(11)/ 2 racine(11)*racine(11)
+	racine(11) / 2 * 11 
+	== racine(11) / 22
+
+	racine(1/75) - racine(1/48)
+	racine(1) / racine(75) - racine(1) / racine(48)
+	racine(1) / racine(5*15) - 1 / racine(4 * 4 * 3)
+	racine(1) / racine(5*5*3) - 1 / 4 racine(3)
+	racine(1) / 5 racine(3) - 1 / 4 racine (3)
+	1 / 5 racine(3) - 1 / 4 racine(3)
+	racine(3) / 15 - racine(3) / 12
+	racine(3) * [ 1/15 - 1/12 ] 
+	racine(3) * [ (12 - 15) / (15*12) ]
+	racine(3) * [ -3 / 180 ]
+	racine(3) * -1/60
+	-1/60 racine(3)
+
+Simplifier une racine carree de 2:
+	Soit x un nombre positif, simplifier l'expression 3 racine(500 x)

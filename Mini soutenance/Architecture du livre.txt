@@ -16,6 +16,5 @@ Plan de la mémoire
 
 Methode et solution
 	Analyse des besoins et des existants
-	
 	Existant
 	Besoins

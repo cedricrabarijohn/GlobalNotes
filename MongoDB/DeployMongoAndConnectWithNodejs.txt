@@ -1,6 +1,6 @@
 - npm i mongoose
 - create db/connection.js
-- inside db/connections.js:
+- inside db/connection.js:
 	const mongoose = require('mongoose')
 	const URI = " THE URL PROVIDED BY THE WEBSITE "
 	//if localhost : const URI = 'mongodb://user:pass@hostname:27017/'
@@ -27,7 +27,7 @@
 		lastName:{
 			type:String
 		}
-	})
+	},{collection:'admin'})
 	module.exports = User = mongoose.model('user',user)
 
 - Create api/User.js

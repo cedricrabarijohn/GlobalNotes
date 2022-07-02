@@ -173,37 +173,15 @@
     - inside the GameList for example :
         const { datas: games, isPending, err} = useFetch(url);
 
-. The React Router : (V5)
-    - Install the react-router-dom@5 :
-        npm install react-router-dom@5
-
-    -import these followings inside the App.js file :
-        import { BrowserRouter as Router , Route, Routes } from 'react-router-dom';
-
-    - To use the router, surround the div with the tag <Router></Router> and use the tags 
-        <Switch>
-            <Route path="/">
-                <ComponentHere />
-            </Route>
-        </Switch>
-    - Ex of usage of the router :
-        <Router>
-            <Switch>
-                <Route path="/">
-                    <GameList />
-                </Route>
-            </Switch>
-        </Router>
 /*****************************************************************************************
-. Exact Match Route : (V5)
-    Same as using the simple react router but adding the keyword 'exact' before the path :
-        <Router>
-            <Switch>
-                <Route exact path="/">
-                    <GameList />
-                </Route>
-            </Switch>
-        </Router>
+. NEW VERSION OF REACT ROUTER : (V6)
+    . npm install react-router-dom@6
+    . import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
+    <Router>
+        <Routes>
+            <Route path="/" element={<Home />}/>
+        </Routes>
+    </Router>
 /*****************************************************************************************
 . Router Links :
     - Using it prevents the app to send too much requests to the server
@@ -213,14 +191,6 @@
         . <Link to="/blabla">Blabla</Link>
 
 /***************************************************************************************
-. NEW VERSION OF REACT ROUTER : (V6)
-    . npm install react-router-dom@6
-    . import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
-    <Router>
-        <Routes>
-            <Route path="/" element={<Home />}/>
-        </Routes>
-    </Router>
 
 . UseNavigate :
     import { useNavigate } from "react-router-dom"

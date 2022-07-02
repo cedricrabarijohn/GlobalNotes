@@ -2,3 +2,10 @@ go to netlify
 do the simple deployement thing with github
 go to settings
 add Environment variables : CI false
+
+
+in the root of the project, create a file named .npmrc and paste this :
+	legacy-peer-deps=true
+
+in the public folder, create a file named _redirects , and paste this :
+	/* /index.html 200

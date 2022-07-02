@@ -44,16 +44,27 @@ function authenticateToken(req, res, next) {
 //*********************************Auth flow**********************************************//
 -Backend: Nodejs
 Verify email and password
-Generate the token if it's valid
-	send it to the cookie of the user by using cookie-parser (use httpOnly: true)
+Generate the token and the refreshToken if it's valid
+	send the token and the refreshToken to the cookie of the user by using cookie-parser (use httpOnly: true)
+		npm install cookie-parser
+
+		const cookieParser = require('cookie-parser')
+
+		app.use(cookieParser())
+
+		res.cookie('token', token, {
+			maxAge: 1000*60*60*24,
+			httpOnly:true
+		})
+
+	//***To get the cookies
+	const cookies = req.cookies
 
 create a function for each type of user to verify their role
 create an endpoint to refresh the token 
 
-
 -Front:
-Login Form
-
+Sign up and Login Form
 
 
 

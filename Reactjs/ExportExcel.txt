@@ -1,0 +1,5 @@
+npm install --save react-html-table-to-excel
+
+import ReactHTMLTableToExcel from 'react-html-table-to-excel';
+
+<ReactHTMLTableToExcel table="idAnlehTable" filename="nomFichier" sheet="Sheet" buttonText="Export to Excel" />
