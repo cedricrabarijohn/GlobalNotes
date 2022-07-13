@@ -1,0 +1,70 @@
+- VARIABLES :
+    ex: var name = 'Bob';
+        Object name = 'Bob';
+        String name = 'Bob';
+
+    . Initialized variables that have nullable type have an initial value of null. Even variables with numeric types are
+      initially null, because numbers are Objects too
+        ex: int? lineCount;
+            assert(lineCount == null);
+    
+        NOTE : Production code ignores the assert() call. During the development, assert(condition) throws an exception
+               if condition is false.
+    
+    . If you enable null safety, then you must initialize the values of non-nullable variables before you use them:
+        int lineCount = 0;
+    
+    . Initializing a local variable is not needed during its declaration, but should be declared before using it.
+
+- LATE VARIABLES : (Dart 2.12)
+    . Declaring a non-nullable variable that's initialized after its declaration
+    . Lazily initializing a variable
+        ex :
+            late String description;
+
+            void main(){
+                description = 'Feijoada!';
+                print(description);
+            }
+
+- FINAL and CONST:  
+    . Final variable can be set only once (you can't change its value)
+    . Const variable is a compile-time constant (Const variables are implicitly final)
+        NOTE : Instance variables can be final but not const
+        
+        - Examples of Final variables : final name = "Bob";
+                                     final String nickname = "Bobby";
+        - Examples of Const variables : const bar = 1 000 000;
+                                        const double atm = 1.01325 * bar;
+    . const keyword can also be used to create constant values
+        - Examples : 
+                var foo = const[];
+                final bar = const[];
+                const baz = []; //Equivalent to 'const[]'
+    . You can change the value of a non-final, non-const variable, even if it used to have a const value
+        - Example : foo = [1,2,3];
+
+    . You can define constants that use type checks and casts (is and as), collection if, and spread operators(... and ...?)
+        - Examples :
+            const Object i = 3;
+            const list = [i as int]; //Use a typecast.
+            const map = { if (i is int) i:'int' }; // Use is and collection if.
+            const set = { if (list is List<int>) ...list }; // ... and a spread.
+
+- BUILT-IN TYPES:
+    The Dart language has special support for the following :
+        Numbers (int, double)
+        Strings (String)
+        Booleans (bool)
+        Lists (List, also known as arrays)
+        Sets (Set)
+        Maps (Map)
+        Runes (Runes: often replaced by the characters API)
+        Symbols (Symbol)
+        The value null (Null)
+
+- Installation (Admin mode) :  choco install dart-sdk
+- Create a small app : dart create -t console cli
+   ===> Note: Under the hood, dart create runs dart pub get, which scans the generated pubspec file and downloads dependencies. 
+    If you add other dependencies to your pubspec file, then run dart pub get to download them.
+- Run the app : dart run
