@@ -5,6 +5,7 @@
     - NodeJs / ExpressJs
     - PostgreSQL
 ```
+# Parcours utilisateurs
 ## 🍝 <ins> Ecran serveur </ins>
 - Login
 - Choisir une table
@@ -33,6 +34,11 @@
 - Liste des produits par plat
 - Prix de revient d'un plat (total des prix des produits)
 
+# ✅ Ecrans
+[![Build Status][github-actions-status]][github-actions-url]
+[![Github Tag][github-tag-image]][github-tag-url]
+[![Discord](https://badgen.net/badge/icon/discord?icon=discord&label)](https://discord.gg/Fjy3vfgy5q)
+# 📝 Base de données
 <table>
     <thead>
         <th>✨ Template ✨</th>
