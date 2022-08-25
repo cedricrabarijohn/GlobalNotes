@@ -58,3 +58,46 @@ async def root(translation: TranslationModel):
 ```
 
 # Deploy on heroku
+## Create a virtual environment for python
+```
+> python -m venv env
+```
+## Activate the virtual environment
+```
+> env\Scripts\activate
+```
+## Upgrade pip
+```
+> python -m pip install --upgrade pip
+```
+## Install packages
+```
+> pip install fastapi
+> pip install translators
+> pip install uvicorn
+> pip install gunicorn (This one is needed for the deployment on heroku)
+```
+## Save all project dependencies to a file
+```
+> pip freeze > requirements.txt
+```
+## To install the dependencies mentioned in requirements.txt
+```
+> pip install -r requirements.txt
+```
+
+## Create a Procfile file (no extension)
+```
+> mkdir Procfile
+```
+- Procfile
+```
+web: gunicorn -w 4 -k uvicorn.workers.UvicornWorker main:app
+```
+- web : is specific to Procfile command convention that will help identify the Heroku deployment process to start a web application with the command next to it.
+- gunicorn is the WSGI server to which we are configuring our application to run on, with the following configuration.
+- -w 4 indicates that we need our application to run on gunicorn with 4 worker processes.
+- -k uvicorn.workers.UvicornWorker tells the gunicorn to run the application using uvicorn.workers.UvicornWorker worker class.
+main:app is our module main where our FastAPI() app is initialized.
+
+## Push the repository to github
