@@ -8,18 +8,19 @@
 # Parcours utilisateurs
 ## 🍝 <ins> Ecran serveur </ins>
 - Login
+- Liste des plats
 - Choisir une table
 - Créer une commande
 - Ajouter des plats pour une commande
 - Valider une commande
 - Générer une facture
-- Ajout de pourboire
+- ~~Ajout de pourboire ( Pas important )~~
 
 ## 🤑 <ins> Ecran caissier </ins>
 - Login
 - Payer une facture (Via carte bancaire ou cash)
 - Générer un reçu après paiement
-- Générer un code qr contenant l'id de la commande ( Pas très important )
+- ~~Générer un code qr contenant l'id de la commande ( Pas très important )~~
 
 ## 👩🏾‍🍳 <ins> Ecran cuisinier </ins>
 - Login
@@ -35,11 +36,11 @@
 - Prix de revient d'un plat (total des prix des produits)
 
 # ✅ Ecrans
-
+NaN
 # 📝 Base de données
 <table>
     <thead>
-        <th>✨ Template ✨</th>
+        <th>🔥 Template 🔥</th>
         <th>Colonne</th>
         <th>type </th>
     </thead>
@@ -150,6 +151,84 @@
             </td>
             <td>
                 Varchar(50)
+            </td>
+        </tr>
+    </tbody>
+</table>
+<table>
+    <thead>
+        <th>🔥 Categorie 🔥</th>
+        <th>Colonne</th>
+        <th>type </th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+            </td>
+            <td>
+                id
+            </td>
+            <td>
+                Serial
+            </td>
+        </tr>
+        <tr>
+            <td>
+            </td>
+            <td>
+                nom
+            </td>
+            <td>
+                Varchar(50)
+            </td>
+        </tr>
+    </tbody>
+</table>
+<table>
+    <thead>
+        <th>🔥 Plat 🔥</th>
+        <th>Colonne</th>
+        <th>type </th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+            </td>
+            <td>
+                id
+            </td>
+            <td>
+                Serial
+            </td>
+        </tr>
+        <tr>
+            <td>
+            </td>
+            <td>
+                nom
+            </td>
+            <td>
+                Varchar(50)
+            </td>
+        </tr>
+        <tr>
+            <td>
+            </td>
+            <td>
+                Prix
+            </td>
+            <td>
+                Double
+            </td>
+        </tr>
+        <tr>
+            <td>
+            </td>
+            <td>
+                idCategorie
+            </td>
+            <td>
+                int
             </td>
         </tr>
     </tbody>

@@ -1,15 +1,25 @@
+# How to implement nodejs jwt
+## Prerequisites
+```js
 const jwt = require('jsonwebtoken')
+const dotenv = require('dotenv')
+```
 
-//inside .env
+## inside .env
+```js
 ACCESS_TOKEN_SECRET = The access token secret
 REFRESH_TOKEN_SECRET = The refresh token secret
-
-//inside the login function
+```
+## simple login function
+```js
 const username = req.body.username
 const user = {name: username}
 const accessToken = jwt.sign(user,process.env.ACCESS_TOKEN_SECRET)
 res.json({accessToken: accessToken})
+```
 
+## AuthenticateToken function
+```js
 function authenticateToken(req, res, next) {
     const authHeader = req.headers['authorization']
     const token = authHeader && authHeader.split(' ')[1]
@@ -19,8 +29,9 @@ function authenticateToken(req, res, next) {
         next()
     })
 }
-
-//************************************With expiration and refresh****************************************//
+```
+# Jwt with expiration and refresh_token
+```js
 function generateAccessToken(user){
     return jwt.sign(user, process.env.ACCESS_TOKEN_SECRET, {expiresIn:'15s'})
 }
@@ -41,26 +52,28 @@ function authenticateToken(req, res, next) {
         next()
     })
 }
-//*********************************Auth flow**********************************************//
--Backend: Nodejs
-Verify email and password
-Generate the token and the refreshToken if it's valid
-	send the token and the refreshToken to the cookie of the user by using cookie-parser (use httpOnly: true)
-		npm install cookie-parser
+```
+# Authentification flow
+- Verify email and password
+- Generate the token and the refreshToken if it's valid
+- Send the token and the refreshToken to the cookie of the user by using cookie-parser (use httpOnly: true)
+```js
+    npm install cookie-parser
 
-		const cookieParser = require('cookie-parser')
+    const cookieParser = require('cookie-parser')
 
-		app.use(cookieParser())
+    app.use(cookieParser())
 
-		res.cookie('token', token, {
-			maxAge: 1000*60*60*24,
-			httpOnly:true
-		})
-
-	//***To get the cookies
+    res.cookie('token', token, {
+        maxAge: 1000*60*60*24,
+        httpOnly:true
+    })
+```
+- To get the cookies
+```js
 	const cookies = req.cookies
-
-create a function for each type of user to verify their role
+```
+- Create a function for each type of user to verify their role
 create an endpoint to refresh the token 
 
 -Front:

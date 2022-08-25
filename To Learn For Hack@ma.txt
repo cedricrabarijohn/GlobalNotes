@@ -1,7 +1,7 @@
 THEME 1 : INFORMATION SÛRE ET ACCESSIBLE 
 
-React 17.0.2
-Ionic (Na react native)
+ReactJs
+Ionic (Ou react native)
 NodeJs
 Postgresql
 MongoDB

@@ -1,3 +1,3 @@
 - Know the meaning of each color
 - color.adobe.com
-- 60 30 10 : 60% main colorm, 30% secondary color, 10% ascent color
+- 60 30 10 : 60% main color, 30% secondary color, 10% ascent color

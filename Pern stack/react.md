@@ -1,4 +1,5 @@
-//fech
+# Fetch
+```js
 const getTodos = async () => {
     try{
         const response = await fetch("http://localhost:5000/todos");
@@ -7,15 +8,16 @@ const getTodos = async () => {
 
     }
 }
-
-//post
+```
+# Post
+```js
 <input onChange = {e => setDescription(e.target.value)} />
 
 const post = async e => {
     e.preventDefault()
     try{
         const body = {description}
-        const response = fetch("http://localhost:5000/todos",{
+        const response = await fetch("http://localhost:5000/todos",{
             method:"POST",
             headers:{"Content-type":"application/json"},
             body: JSON.stringify(body)
@@ -24,3 +26,4 @@ const post = async e => {
 
     }
 }
+```

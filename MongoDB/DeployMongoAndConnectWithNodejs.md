@@ -1,18 +1,23 @@
-- npm i mongoose
-- create db/connection.js
-- inside db/connection.js:
-	const mongoose = require('mongoose')
-	const URI = " THE URL PROVIDED BY THE WEBSITE "
-	//if localhost : const URI = 'mongodb://user:pass@hostname:27017/'
-	const connectDB = async() =>{
-		await mongoose.connect(URI, {
-			useUnifiedTopology: true,
-			useNewUrlParser: true
-		});
-		console.log('db connected successfully')
-	}
-	
-	module.exports = connectDB
+# How to use mongodb with nodejs
+## cli command
+```cli
+npm i --save mongoose
+```
+## create db/connection.js
+```js
+const mongoose = require('mongoose')
+const URI = " THE URL PROVIDED BY THE WEBSITE "
+//if localhost : const URI = 'mongodb://user:pass@hostname:27017/'
+const connectDB = async() =>{
+	await mongoose.connect(URI, {
+		useUnifiedTopology: true,
+		useNewUrlParser: true
+	});
+	console.log('db connected successfully')
+}
+
+module.exports = connectDB
+```
 - inside index.js or server.js:
 	const connectDB = require(./db/connection)
 	connectDB()

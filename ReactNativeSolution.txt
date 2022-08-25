@@ -1,8 +1,0 @@
-inside package.json:
-	"main":"node_modules/expo/AppEntry.js"
-inside AppEntry.js: (the path is : node_modules/expo/AppEntry.js)
-	import App from '../../src/App';
-inside app.json:
-	"packagerOpts":{
-    		"sourceExts": [ "js", "json", "ts", "tsx", "jsx", "vue"]
-  	}

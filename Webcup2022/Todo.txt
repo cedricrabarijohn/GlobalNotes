@@ -1,7 +1,0 @@
-Create github repo xxxxxxxx VITA xxxxxxxxxx
-Create Heroku acc xxxxxxxx VITA xxxxxxxxxx
-Deploy Nodejs/Expressjs on Heroku xxxxxxxx VITA xxxxxxxxxx
-Create Netlify xxxxxxxx VITA xxxxxxxxxx
-Create react repo on github xxxxxxxx VITA xxxxxxxxxx
-Deploy Reactjs on Netlify xxxxxxxx VITA xxxxxxxxxx
-Deploy Postgres on Heroku 
