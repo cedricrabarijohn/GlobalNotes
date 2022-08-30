@@ -1,3 +1,6 @@
+<h1 align="center" style="font-weight:bolder">🔥 FAST API 🔥</h1>
+<p align="center">Cedric Rabarijohn 2022, all right reserved.</p>
+
 # Installation
 ```
 > pip install fastapi
