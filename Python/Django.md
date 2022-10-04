@@ -2,28 +2,28 @@
 
 ## Update the package list
 ```
-sudo apt update
+> sudo apt update
 ```
 
 ## Install django
 ```
-sudo apt install python3-django
+> sudo apt install python3-django
 ```
 
 ## Verify the install
 ```
-django-admin --version
+> django-admin --version
 ```
 
 # Creating a project
 ```
-django-admin startproject mysite
+> django-admin startproject mysite
 ```
 
 # The development server
 ## Run the server
 ```
-python3 manage.py runserver
+> python3 manage.py runserver
 ```
 
 Expected output
@@ -56,7 +56,7 @@ A project can contain multiple apps and an app can be in multiple projects.
 **To create your app, make sure you’re in the same directory as manage.py**
 
 ```
-python3 manage.py startapp polls
+> python3 manage.py startapp polls
 ```
 ## Write your first view
 ### Create the view
@@ -101,3 +101,63 @@ urlpatterns = [
 ```
 # Database setup
 
+## Postgresql
+
+### Install the components from the ubuntu repositories
+
+```
+> sudo apt update
+> sudo apt install python3-pip python3-dev libpq-dev postgresql postgresql-contrib
+```
+
+### Creating a database and a database User
+```
+<!-- Connect to the psql as postgres -->
+
+> sudo -u postgres psql
+```
+
+```
+<!-- Creating the database and a user -->
+
+postgres=# CREATE DATABASE <myproject>;
+postgres=# CREATE USER <myprojectuser> WITH PASSWORD '<password>';
+```
+```
+<!-- Adding roles to the recently created user -->
+
+postgres=# ALTER ROLE <myprojectuser> SET client_encoding TO 'utf8';
+postgres=# ALTER ROLE <myprojectuser> SET default_transaction_isolation TO 'read commited';
+postgres=# ALTER ROLE <myprojectuser> SET timezone TO 'UTC';
+```
+
+```
+<!-- Giving all privileges to a database to the created user -->
+
+postgres=# GRANT ALL PRIVILEGES ON DATABASE <myproject> TO <myprojectuser>;
+```
+
+```
+<!-- Quit the postgres session -->
+
+postgres=# \q
+```
+
+### Configure the django app
+**Make sure you have a venv configured for the django app**
+```
+(myprojectenv) $ pip install Django psycopg2
+```
+### Configure the django database settings (myproject/myproject/settings.py)
+```py
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'myproject',
+        'USER': 'myprojectuser',
+        'PASSWORD': 'password',
+        'HOST': 'localhost',
+        'PORT': '',
+    }
+}
+```
