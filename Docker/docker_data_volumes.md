@@ -87,4 +87,39 @@ container1
 ```
 $ docker volume ls
 ```
+## Run busybox with the volume
+```
+$ docker run -it -v volumename:/data busybox
+```
+
+# Work by creacting a volume with docker create volume
+
+## Create a volume 
+```
+$ docker volume create my-vol
+```
+
+## Start busybox with the created volume
+```
+$ docker run -it -v my-vol:/a/folder/name --name devtest busybox
+```
+## Verify that the volume was created and mounted correctly (Look for the Mounts section)
+```
+$ docker inspect devtest
+```
+```
+"Mounts": [
+    {
+        "Type": "volume",
+        "Name": "myvol",
+        "Source": "/var/lib/docker/volumes/myvol2/_data",
+        "Destination": "/app",
+        "Driver": "local",
+        "Mode": "",
+        "RW": true,
+        "Propagation": ""
+    }
+],
+```
+
 
