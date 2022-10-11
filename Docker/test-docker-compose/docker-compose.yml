@@ -1,0 +1,9 @@
+services:
+  test-web:
+    build: ./web/.
+    image: cedricrabarijohn/nodejs-test
+    container_name: nodejs-test-container
+    ports:
+      - "3001:3001"
+    volumes:
+      - ./web/app:/usr/src/app
