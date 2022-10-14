@@ -146,7 +146,7 @@ postgres=# \q
 ### Configure the django app
 **Make sure you have a venv configured for the django app**
 ```
-(myprojectenv) $ pip install Django psycopg2
+(myprojectenv) $ pip install django psycopg2
 ```
 ### Configure the django database settings (myproject/myproject/settings.py)
 ```py

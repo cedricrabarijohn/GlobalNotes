@@ -7,3 +7,15 @@ services:
       - "3001:3001"
     volumes:
       - ./web/app:/usr/src/app
+  web-2:
+    build: ./web2/.
+    image: cedricrabarijohn/nodejs-test-2
+    container_name: nodejs-test-container2
+    ports:
+       - "3000:3000"
+  web-3:
+    build: ./web3/.
+    image: cedricrabarijohn/nodejs-test-3
+    container_name: nodejs-test-container3
+    ports:
+      - "3002:3002"

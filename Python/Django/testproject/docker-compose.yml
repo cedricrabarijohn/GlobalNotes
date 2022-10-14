@@ -1,0 +1,7 @@
+services:
+  django-project:
+    build: .
+    image: cedricrabarijohn/django-test-project-image:latest
+    container_name: django-test-project-container
+    ports:
+      - "8000:8000"
