@@ -190,3 +190,46 @@ class Choice(models.Model):
 - Django will :
     - Create a database schema (CREATE TABLE statements) for this app.
     - Create a Python database-access API for accessing Question and Choice objects.
+## Tell our project that the polls app is installed
+- Go to **your_project/settings** then modify **INSTALLED_APPS** array. For example the **PollsConfig** class is in **polls/apps.py** file, it's dotted path would be '**polls.app.PollsConfig**'. Add this doted path
+```python
+INSTALLED_APPS = [
+    'polls.app.PollsConfig',
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+]
+```
+
+## Make migrations
+```
+$ python manage.py makemigrations polls
+```
+> By running **makemigrations**, you're telling Django that you've made some changes to your models, and that you'd like the changes to be stored as a migration.
+
+> **Migrations** are how Django stores changes to your model, they are stored inside **your_app/migrations/0001.initial.py**
+
+## Print SQL that will be executed 
+```
+$ python manage.py sqlmigrate your_app 0001
+```
+
+## Check for any problems before migrating
+```
+$ python manage.py check
+```
+## Migrate (will create models tables in the database)
+```
+$ python manage.py migrate
+```
+
+> Migrations are very powerful and let you change your models over time as you develop your project, without the need to delete your database or tables and make new ones.
+
+## Resume
+- Change your models (in **models.py**)
+- Run **python manage.py makemigrations** to create migrations for those changes
+- Run **python manage.py migrate** to apply those changes to the database
+
