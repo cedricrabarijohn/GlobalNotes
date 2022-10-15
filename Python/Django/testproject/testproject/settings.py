@@ -31,6 +31,7 @@ ALLOWED_HOSTS = ["localhost"]
 # Application definition
 
 INSTALLED_APPS = [
+    'polls.apps.PollsConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -80,9 +81,9 @@ DATABASES = {
     # }
     'default':{
         'ENGINE' : 'django.db.backends.postgresql',
-        'NAME': 'mydatabase',
-        'USER': 'mydatabaseuser',
-        'PASSWORD':'',
+        'NAME': 'cedric',
+        'USER': 'cedric',
+        'PASSWORD':'1234',
         'HOST':'127.0.0.1',
         'PORT':'5433'
     }
