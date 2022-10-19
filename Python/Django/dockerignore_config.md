@@ -1,12 +1,3 @@
-```dockerfile
-ENV PYTHONDONTWRITEBYTECODE 1
-ENV PYTHONUNBUFFERED=1
-ENV VIRTUAL_ENV=/opt/venv
-
-RUN python3 -m venv $VIRTUAL_ENV
-ENV PATH="$VIRTUAL_ENV/bin:$PATH"
-```
-dockerignore
 ```
 *.pyc
 *.pyo
@@ -36,3 +27,4 @@ web/static/CACHE
 stats
 Dockerfile
 ```
+
