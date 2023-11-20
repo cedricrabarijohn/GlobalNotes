@@ -19,11 +19,13 @@ const connectDB = async() =>{
 module.exports = connectDB
 ```
 - inside index.js or server.js:
+```js
 	const connectDB = require(./db/connection)
 	connectDB()
 	app.use(express.json({extended:false}))
-
+```
 - create db/User.js:
+```js
 	const mongoose = require('mongoose')
 	const user = new mongoose.Schema({
 		firstName:{
@@ -34,8 +36,9 @@ module.exports = connectDB
 		}
 	},{collection:'admin'})
 	module.exports = User = mongoose.model('user',user)
-
+```
 - Create api/User.js
+```js
 	const express = require('express')
 	const mongoose = require('mongoose')
 	const User = require('../db/User')
@@ -51,9 +54,15 @@ module.exports = connectDB
 		res.json(userModel)
 	})
 	module.exports = route
-
+```
 - inside server.js:
-	app.use('api/userModel', require('./api/User'))
+```js
+	// At the top with the other importation
+	const UserAPI = require('./api/User');
+	
+	// after some configuration 
+	app.use('api/userModel', UserAPI);
+```
 
 NEXT VIDEO TO SEE : 
 	CRUD REST API using Node | Express | MongoDB
