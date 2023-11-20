@@ -12,23 +12,23 @@ Each topic section in this document spans multiple days, with designated instruc
 
 ## Day 1 | [TELEVISION/MOVIE]
 
-Watch a TV show or movie without subtitles for 30 minutes. Pay attention to the conversational pace and try to follow along without pausing. Remember, it must be about the topic and intonation.
+Watch a TV show or movie about **Travel** without subtitles for 30 minutes. Pay attention to the conversational pace and try to follow along without pausing. Remember, it must be about the topic and intonation.
 
 **Youtube Example** : [Kara and Nate](https://www.youtube.com/channel/UC4ijq8Cg-8zQKx8OH12dUSw)
 
 ## Day 2 | [PARTNER PRACTICE]
 ### Practice is the focus
-Focus on speaking fluently with a language partner or tutor for **30 minutes** about the TV show or the movie you watched. Practice smooth conversations with natural pauses and intonation.
+Focus on speaking fluently with a language partner or tutor for **30 minutes** about the TV show or the movie you watched about **Travel**. Practice smooth conversations with natural pauses and intonation.
 
 You can : Speak to them **in person**, **call them**, etc ...
 
 ## Day 3 | [ARTICLE]
-Read a short article or news story **out loud** for at least **15 minutes**.
+Read a short article or news story **out loud** for at least **15 minutes** about **Travel**.
 
 Focus on maintaining a smooth and natural flow while reading. Remember, it must be about the **topic of this section** **(Travel)**
 
 ## Day 4 | [PARTNER PRACTICE]
-Engage in a **20 minutes** English conversation about the article you read. Focus on maintaining fluency and conversational flow.
+Engage in a **20 minutes** English conversation about the article you read about **Travel**. Focus on maintaining fluency and conversational flow.
 
 ## Day 5 | [IMAGE DESCRIBE]
 Practice describing a picture or a scene in english for **10 minutes**. Focus on speaking smoothly without pausing to search for words. Don't use a dictionnary or search on google for translations. Use your own words, the ones you know. 
