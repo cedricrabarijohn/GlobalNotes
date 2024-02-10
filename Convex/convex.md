@@ -10,19 +10,19 @@ Convex is a Backend Application Platform that keeps you focused on building your
 npm create vite@latest my-app -- --template react-ts
 ```
 
-## Install the convex client and server library
+### Install the convex client and server library
 
 ```sh
 cd my-app && npm install convex
 ```
-## Setup a Convex dev deployment
+### Setup a Convex dev deployment
 
 ```sh
 npx convex dev
 ```
 It will also create a convex/ folder for you to write your backend API functions in. The dev command will then continue running to sync your functions with your dev deployment in the cloud.
 
-## Create sample data for your database
+### Create sample data for your database
 In a new terminal window, create a sampleData.jsonl file with some sample data.
 
 ```json
@@ -31,13 +31,13 @@ In a new terminal window, create a sampleData.jsonl file with some sample data.
 {"text": "Integrate Convex", "isCompleted": false}
 ```
 
-## Add the sample data to your database
+### Add the sample data to your database
 Now that your project is ready, add a tasks table with the sample data into your Convex database with the import command.
 ```sh
 npx convex import --table tasks sampleData.jsonl
 ```
 
-## (optional) Define a schema
+### (optional) Define a schema
 Add a new file schema.ts in the convex/ folder with a description of your data.
 
 ```ts
@@ -53,7 +53,7 @@ export default defineSchema({
   }),
 });
 ```
-## Expose a database query
+### Expose a database query
 Add a new file tasks.ts in the **convex/** folder with a query function that loads the data.
 
 Exporting a query function from this file declares an API function named after the file and the export name, api.tasks.get.
@@ -70,7 +70,7 @@ export const get = query({
 });
 ```
 
-## Connect the app to your backend
+### Connect the app to your backend
 In **src/main.tsx**, create a **ConvexReactClient** and pass it to a **ConvexProvider** wrapping your app.
 
 ```ts
@@ -93,7 +93,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
 );
 ```
 
-## Display the data in your app
+### Display the data in your app
 In src/App.tsx, use the useQuery hook to fetch from your api.tasks.get API function and display the data.
 
 ```ts
@@ -117,7 +117,7 @@ function App() {
 export default App;
 ```
 
-## Start the app
+### Start the app
 Start the app, open http://localhost:5173/ in a browser, and see the list of tasks.
 ```sh
 npm run dev
